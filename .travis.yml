@@ -6,4 +6,4 @@ before_install:
   - docker build -f Dockerfile.dev -t pyrkh/docker-react .
 
 script:
-  - docker run pyrkh/docker-react npm run test -- --coverage
+  - docker run -e CI=true pyrkh/docker-react npm run test
